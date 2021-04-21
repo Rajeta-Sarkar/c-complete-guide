@@ -1,5 +1,7 @@
 #include<iostream>
 using namespace std;
+// check if the arry is sorted or not
+
 int fibbo(int n){
     if (n==0){
         return 0;
@@ -8,7 +10,7 @@ int fibbo(int n){
         return 1;
     }
     int ans = fibbo(n-1)+fibbo(n-2);
-    cout<<ans<<" ";
+  
     return ans;
 }
 int main (){

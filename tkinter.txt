@@ -1,0 +1,6 @@
+form tkinter import *
+root= TK()
+scrollbar = Scrollbar(root)
+scrollbar.pack(side=RIGHT, fill=Y)
+mylist= Listbox(root,yscrollcommand=scrollbar.set)
+for line in range(Num):

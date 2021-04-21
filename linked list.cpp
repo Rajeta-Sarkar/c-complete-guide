@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+static int ctr=0;
 class Node{
     public:
     int info;
@@ -24,27 +25,40 @@ void insertAtTail(Node* &head, int val){
 }
 
 void display(Node* head){
-    cout<<endl;
-    cout<<"head "<<head<<endl;
-    cout<<"head->info "<<head->info<<endl;
-    cout<<"head->next "<<head->next<<endl;
+    
     Node* temp = head;
     while(temp != NULL){
-        cout<<"temp->info  "<<temp->info<<" "<<endl;
+        cout<<temp->info<<"->";
         temp=temp->next;
-        cout<<"head "<<head<<endl;
-        cout<<"head->info "<<head->info<<endl;
-        cout<<"head->next "<<head->next<<endl;
     }
+    cout<<"NULL"<<endl;
 }
+Node* reverseRecursive(Node* head){
+    ctr++;
+    
+    if( head==NULL || head->next==NULL){
+        
+        return head;    
+    }
+    cout<<"check"<<endl;
+    Node* newhead=reverseRecursive(head->next);
+    head->next->next=head;
+    head->next=NULL;
+    return newhead;
+}
+
 int main(){
     Node* head = NULL;
-    cout<<"head="<<head<<endl;
+    
+    //cout<<"head="<<head<<endl;
     insertAtTail(head,1);
     insertAtTail(head,2);
     insertAtTail(head,3);
     insertAtTail(head,4);
     display(head);
+    Node* newhead=reverseRecursive(head);
+    display(newhead);
+    cout<<ctr;
     
     return 0;
 }
