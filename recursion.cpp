@@ -14,7 +14,7 @@ int fibbo(int n){
     return ans;
 }
 int main (){
-    int n;
+    int n;      
     cin>>n;
     cout<<fibbo(n);
     return 0;
