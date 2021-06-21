@@ -1,7 +1,0 @@
-#include<iostream>
-using namespace std;
-const int INT= 1e9;
-int main(){
-    cout<<INT;
-    return 0;
-}
