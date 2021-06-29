@@ -33,7 +33,7 @@ int main(){
         cin>>a[i];
     }
     
-    int N = 1000002;
+    const int N=1e6 = 2;
 
     int idx[N];
     for (int i=0; i<N ; i++){
