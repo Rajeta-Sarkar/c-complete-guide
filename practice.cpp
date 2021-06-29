@@ -1,15 +1,11 @@
-#include <stdio.h>
-#include<iostream>
-#include <string>
+#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int main() {
-
-    int i = 4;
-            string s='A';
-            for (int j =0 ; j<26; j++){
-                s.push_back('A'+j);
-                
-            }
-           cout<<s<<" "<<endl;
-    return 0;
+int main(){
+    int n=1e6+2;
+    int a[n]={0};
+    for (int i=0; i<n; i++){
+        cout<<a[i]<<" ";
     }
+    return 0;
+}

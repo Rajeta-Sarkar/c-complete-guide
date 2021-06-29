@@ -9,4 +9,6 @@ int main(){
     int a=10;
     cout<<INF+a;
     return 0;
+
+    
 }
